@@ -454,9 +454,10 @@ textarea { min-height: 120px; resize: vertical; }
 /* Make footer pill links look like buttons */
 a.pill{
   text-decoration: none;
-  color: inherit;
+  color: #ffffff !important;
   display: inline-block;
 }
+
 a.pill:focus{ outline: 2px solid rgba(255,255,255,.65); outline-offset: 3px; }
 
 
