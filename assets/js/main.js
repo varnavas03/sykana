@@ -54,3 +54,34 @@
   }, { threshold: 0.12 });
   els.forEach(el => io.observe(el));
 })();
+(function () {
+  const dict = {
+    en: { home: "Home", events: "Past Events", about: "About", board: "Board", contact: "Contact" },
+    el: { home: "ΑΡΧΙΚΗ", events: "ΔΙΟΡΓΑΝΩΣΕΙΣ", about: "ΛΕΠΤΟΜΕΡΕΙΕΣ", board: "ΣΥΜΒΟΥΛΙΟ", contact: "ΕΠΙΚΟΙΝΩΝΙΑ" }
+  };
+
+  function applyLang(lang) {
+    const d = dict[lang] || dict.en;
+    const h = (id) => document.getElementById(id);
+
+    if (h("navHome")) h("navHome").textContent = d.home;
+    if (h("navEvents")) h("navEvents").textContent = d.events;
+    if (h("navAbout")) h("navAbout").textContent = d.about;
+    if (h("navBoard")) h("navBoard").textContent = d.board;
+    if (h("navContact")) h("navContact").textContent = d.contact;
+
+    localStorage.setItem("lang", lang);
+  }
+
+  function toggleLang() {
+    const current = localStorage.getItem("lang") || "en";
+    applyLang(current === "en" ? "el" : "en");
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    applyLang(localStorage.getItem("lang") || "en");
+    const btn = document.getElementById("langToggle");
+    if (btn) btn.addEventListener("click", (e) => { e.preventDefault(); toggleLang(); });
+  });
+})();
+
