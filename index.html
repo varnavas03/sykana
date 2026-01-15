@@ -1,85 +1,127 @@
 <!DOCTYPE html>
-
 <html lang="el">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>ΣΥ.ΚΑ.ΝΑ. | Home</title>
-<link href="assets/css/style.css?v=9" rel="stylesheet"/>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>ΣΥ.ΚΑ.ΝΑ. | Home</title>
+  <link href="assets/css/style.css?v=9" rel="stylesheet"/>
 </head>
+
 <body>
-<div class="siteHeader"><div class="topbar">
-<div class="container navwrap">
-<div class="brand">
-</div>
-<nav aria-label="Main" class="nav">
-<a class="active" href="index.html">ΑΡΧΙΚΗ</a>
-<a class="" href="past-events.html">ΔΙΟΡΓΑΝΩΣΕΙΣ</a>
-<a class="" href="about.html">ΛΕΠΤΟΜΕΡΕΙΕΣ</a>
-<a class="" href="board.html">ΣΥΜΒΟΥΛΙΟ</a>
-<a class="" href="contact.html">ΕΠΙΚΟΙΝΩΝΙΑ</a>
-</nav>
-<a aria-label="Facebook" class="fb" href="https://www.facebook.com/groups/158616830839558/" rel="noopener" target="_blank">
-<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H8v-3h2.4V9.6c0-2.4 1.4-3.7 3.6-3.7 1 0 2 .2 2 .2v2.2h-1.1c-1.1 0-1.4.7-1.4 1.4V12H18l-.6 3h-2.7v7A10 10 0 0 0 22 12z"></path></svg>
-</a>
-</div>
-</div>
-<div class="header">
-<div class="container headergrid">
-<div>
-<div class="logoText">ΣΥ.ΚΑ.ΝΑ.</div>
-<div class="subText">Σύνδεσμος Καταπολέμησης Ναρκωτικών Λάρνακας</div>
-</div>
-<div class="official"><small>OFFICIAL<br/>WEBSITE</small></div>
-</div>
-</div>
-</div>
-<section class="section alt reveal from-left">
-<div class="container split">
-<img alt="Δράσεις και άνθρωποι" class="contain whoPhoto seal" src="assets/img/ui/logo-full.jpg"/>
-<div class="card">
-<div class="h2">Ποιοι είμαστε;</div>
-<div class="prose">
-<p>Ο Σύνδεσμος Καταπολέμησης των Εξαρτήσεων Λάρνακας είναι εθελοντική οργάνωση και δραστηριοποιείται από το 1990. Είναι η αρχαιότερη οργάνωση στην Κύπρο που ασχολείται με τον τομέα της πρόληψης των εξαρτήσεων και αριθμεί πάνω από 200 μέλη - εθελοντές.</p>
-</div>
-<a class="readmore" href="about.html">Read More</a>
-</div>
-</div>
-</section>
-<footer class="footer">
-  <div class="container">
-    <div class="footerTitle">ΕΠΙΚΟΙΝΩΝΗΣΤΕ ΜΑΖΙ ΜΑΣ:</div>
 
-    <div class="footerCards">
-      <div class="footerCard">
-        <img alt="Location" class="footerImg" src="assets/img/ui/location_pic.jpg" />
-        <div class="footerSmall">Λεωφόρος Αθηνών 58,<br />Αραδίππου 7103, Κύπρος</div>
-        <a class="pill" href="https://maps.app.goo.gl/haJ2mCVqD6Q5JLBh9" target="_blank" rel="noopener">LOCATION</a>
-      </div>
+  <!-- TOP BAR + HEADER -->
+  <div class="siteHeader">
+    <div class="topbar">
+      <div class="container navwrap">
 
-      <div class="footerCard">
-        <img alt="Facebook" class="footerImg contain" src="assets/img/ui/facebook_pic.png" />
-        <div class="footerSmall">Σύνδεσμος Καταπολέμησης των<br />Εξαρτήσεων Λάρνακας</div>
-        <a class="pill" href="https://www.facebook.com/groups/158616830839558/" target="_blank" rel="noopener">FACEBOOK</a>
-      </div>
+        <!-- BURGER (mobile only) -->
+        <button class="burger" type="button" aria-label="Μενού" aria-expanded="false" aria-controls="mobileDrawer">
+          <span></span><span></span><span></span>
+        </button>
 
-      <div class="footerCard">
-        <img alt="Phone" class="footerImg contain" src="assets/img/ui/phone-PIC.jpg"/>
-        <div class="footerSmall">+357 24813590</div>
-        <a class="pill" href="tel:+35724813590">PHONE</a>
-      </div>
+        <!-- BRAND (leave empty if you want, or put logo later) -->
+        <div class="brand"></div>
 
-      <div class="footerCard">
-        <img alt="Email" class="footerImg contain" src="assets/img/ui/email_pic.png" />
-        <div class="footerSmall">antinarkoticngo@cytanet.com.cy</div>
-        <a class="pill" href="mailto:antinarkoticngo@cytanet.com.cy?subject=Contact%20from%20SY.KA.NA.&body=Hello%20SY.KA.NA.,%0D%0A%0D%0A">EMAIL</a>
+        <!-- DESKTOP NAV -->
+        <nav aria-label="Main" class="nav">
+          <a class="active" href="index.html">ΑΡΧΙΚΗ</a>
+          <a href="past-events.html">ΔΙΟΡΓΑΝΩΣΕΙΣ</a>
+          <a href="about.html">ΛΕΠΤΟΜΕΡΕΙΕΣ</a>
+          <a href="board.html">ΣΥΜΒΟΥΛΙΟ</a>
+          <a href="contact.html">ΕΠΙΚΟΙΝΩΝΙΑ</a>
+        </nav>
+
+        <!-- FACEBOOK ICON (desktop only by CSS) -->
+        <a aria-label="Facebook" class="fb" href="https://www.facebook.com/groups/158616830839558/" rel="noopener" target="_blank">
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M22 12a10 10 0 1 0-11.6 9.9v-7H8v-3h2.4V9.6c0-2.4 1.4-3.7 3.6-3.7 1 0 2 .2 2 .2v2.2h-1.1c-1.1 0-1.4.7-1.4 1.4V12H18l-.6 3h-2.7v7A10 10 0 0 0 22 12z"></path>
+          </svg>
+        </a>
+
       </div>
     </div>
 
-    <div class="copy">© 2026 ΣΥ.ΚΑ.ΝΑ. - Official Website</div>
-  </div>
-</footer>
+    <!-- MOBILE OVERLAY + DRAWER -->
+    <div class="drawerOverlay" hidden></div>
 
-<script src="assets/js/main.js?v=10"></script>
+    <aside id="mobileDrawer" class="mobileDrawer" hidden>
+      <div class="drawerTop">
+        <div class="drawerTitle">Μενού</div>
+        <button class="drawerClose" type="button" aria-label="Κλείσιμο">×</button>
+      </div>
+
+      <a class="active" href="index.html">ΑΡΧΙΚΗ</a>
+      <a href="past-events.html">ΔΙΟΡΓΑΝΩΣΕΙΣ</a>
+      <a href="about.html">ΛΕΠΤΟΜΕΡΕΙΕΣ</a>
+      <a href="board.html">ΣΥΜΒΟΥΛΙΟ</a>
+      <a href="contact.html">ΕΠΙΚΟΙΝΩΝΙΑ</a>
+
+      <a class="drawerFb" href="https://www.facebook.com/groups/158616830839558/" target="_blank" rel="noopener">
+        Facebook
+      </a>
+    </aside>
+
+    <!-- HEADER (your big logo text) -->
+    <div class="header">
+      <div class="container headergrid">
+        <div>
+          <div class="logoText">ΣΥ.ΚΑ.ΝΑ.</div>
+          <div class="subText">Σύνδεσμος Καταπολέμησης Ναρκωτικών Λάρνακας</div>
+        </div>
+        <div class="official"><small>OFFICIAL<br/>WEBSITE</small></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE CONTENT -->
+  <section class="section alt reveal from-left">
+    <div class="container split">
+      <img alt="Δράσεις και άνθρωποι" class="contain whoPhoto seal" src="assets/img/ui/logo-full.jpg"/>
+      <div class="card">
+        <div class="h2">Ποιοι είμαστε;</div>
+        <div class="prose">
+          <p>Ο Σύνδεσμος Καταπολέμησης των Εξαρτήσεων Λάρνακας είναι εθελοντική οργάνωση και δραστηριοποιείται από το 1990. Είναι η αρχαιότερη οργάνωση στην Κύπρο που ασχολείται με τον τομέα της πρόληψης των εξαρτήσεων και αριθμεί πάνω από 200 μέλη - εθελοντές.</p>
+        </div>
+        <a class="readmore" href="about.html">Read More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footerTitle">ΕΠΙΚΟΙΝΩΝΗΣΤΕ ΜΑΖΙ ΜΑΣ:</div>
+
+      <div class="footerCards">
+        <div class="footerCard">
+          <img alt="Location" class="footerImg" src="assets/img/ui/location_pic.jpg"/>
+          <div class="footerSmall">Λεωφόρος Αθηνών 58,<br/>Αραδίππου 7103, Κύπρος</div>
+          <a class="pill" href="https://maps.app.goo.gl/haJ2mCVqD6Q5JLBh9" target="_blank" rel="noopener">LOCATION</a>
+        </div>
+
+        <div class="footerCard">
+          <img alt="Facebook" class="footerImg contain" src="assets/img/ui/facebook_pic.png"/>
+          <div class="footerSmall">Σύνδεσμος Καταπολέμησης των<br/>Εξαρτήσεων Λάρνακας</div>
+          <a class="pill" href="https://www.facebook.com/groups/158616830839558/" target="_blank" rel="noopener">FACEBOOK</a>
+        </div>
+
+        <div class="footerCard">
+          <img alt="Phone" class="footerImg contain" src="assets/img/ui/phone-PIC.jpg"/>
+          <div class="footerSmall">+357 24813590</div>
+          <a class="pill" href="tel:+35724813590">PHONE</a>
+        </div>
+
+        <div class="footerCard">
+          <img alt="Email" class="footerImg contain" src="assets/img/ui/email_pic.png"/>
+          <div class="footerSmall">antinarkoticngo@cytanet.com.cy</div>
+          <a class="pill" href="mailto:antinarkoticngo@cytanet.com.cy?subject=Contact%20from%20SY.KA.NA.&body=Hello%20SY.KA.NA.,%0D%0A%0D%0A">EMAIL</a>
+        </div>
+      </div>
+
+      <div class="copy">© 2026 ΣΥ.ΚΑ.ΝΑ. - Official Website</div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js?v=10"></script>
 </body>
 </html>
