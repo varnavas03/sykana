@@ -472,3 +472,113 @@ img.contain{object-fit:contain;padding:0;background:#fff;}
 /* Utility: show full image without cropping */
 .imgContain{object-fit:contain !important; background:#fff;}
 
+/* ===== Mobile Drawer Menu (Slide from left) ===== */
+
+.burger{
+  display:none;
+  width:44px;
+  height:44px;
+  border:0;
+  background: rgba(255,255,255,0.12);
+  border-radius: 12px;
+  cursor:pointer;
+  padding:10px;
+}
+.burger span{
+  display:block;
+  height:2px;
+  background:#fff;
+  margin:6px 0;
+  border-radius:2px;
+}
+
+/* overlay behind drawer */
+.drawerOverlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 4500;
+}
+
+/* drawer panel */
+.mobileDrawer{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: min(320px, 86vw);
+  background: var(--primary);
+  color: #fff;
+  z-index: 5000;
+  padding: 14px;
+  transform: translateX(-105%);
+  transition: transform 0.28s ease;
+  box-shadow: 12px 0 28px rgba(0,0,0,0.35);
+  overflow-y: auto;
+}
+
+/* open state */
+.mobileDrawer.open{
+  transform: translateX(0);
+}
+
+.drawerTop{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding: 6px 4px 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.18);
+  margin-bottom: 10px;
+}
+.drawerTitle{
+  font-weight: 900;
+  letter-spacing: 0.6px;
+}
+.drawerClose{
+  width:40px;
+  height:40px;
+  border:0;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.12);
+  color:#fff;
+  font-size: 26px;
+  line-height: 1;
+  cursor:pointer;
+}
+
+.mobileDrawer a{
+  display:block;
+  color:#fff;
+  font-weight: 800;
+  padding: 12px 12px;
+  border-radius: 12px;
+  text-decoration:none;
+  margin-top: 6px;
+}
+.mobileDrawer a:hover,
+.mobileDrawer a.active{
+  background: rgba(255,255,255,0.14);
+}
+.mobileDrawer .drawerFb{
+  margin-top: 14px;
+  opacity: 0.95;
+  border-top: 1px solid rgba(255,255,255,0.18);
+  padding-top: 14px;
+}
+
+/* Mobile behavior: hide desktop nav, show burger left */
+@media (max-width: 820px){
+  .nav{ display:none; }
+  .fb{ display:none; }
+  .burger{ display:block; }
+  .navwrap{
+    justify-content: flex-start;
+    gap: 12px;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .mobileDrawer{ transition:none; }
+}
