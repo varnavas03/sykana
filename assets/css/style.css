@@ -1,4 +1,4 @@
-:root {
+:root { 
   --primary: #1f3f86;
   --primary-dark: #173064;
   --accent: #2a56c6;
@@ -13,7 +13,8 @@ a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 .container { width: min(var(--max), calc(100% - 48px)); margin: 0 auto; }
 
-.siteHeader{position:sticky;top:0;z-index:3000;}
+/* IMPORTANT: siteHeader is NOT sticky anymore (only the top bar is) */
+.siteHeader{ position: static; top:auto; z-index:auto; }
 
 .topbar {
   background: var(--primary);
@@ -21,7 +22,13 @@ a:hover { text-decoration: underline; }
   height: 56px;
   display:flex;
   align-items:center;
+
+  /* Sticky ONLY for this bar */
+  position: sticky;
+  top: 0;
+  z-index: 3000;
 }
+
 .navwrap { display:flex; align-items:center; justify-content:space-between; gap:20px; }
 .brand {
   display:flex; align-items:center; gap:10px;
@@ -424,19 +431,6 @@ textarea { min-height: 120px; resize: vertical; }
   margin-top:14px;
 }
 
-
-/* Footer contact card images */
-.footerImg{width:120px;height:120px;border-radius:999px;display:block;margin:0 auto 12px;object-fit:cover;background:#fff;}
-.footerImg.contain{object-fit:contain;padding:10px;}
-
-
-/* Sticky top navigation */
-.topbar{
-  position: sticky;
-  top: 0;
-  z-index: 2000;
-}
-
 /* Scroll reveal animations */
 .reveal{opacity:0;transition:opacity .7s ease,transform .7s ease;will-change:transform,opacity;}
 .reveal.from-left{ transform: translateX(-28px); }
@@ -450,16 +444,13 @@ textarea { min-height: 120px; resize: vertical; }
   .reveal{opacity:0;transition:opacity .7s ease,transform .7s ease;will-change:transform,opacity;}
 }
 
-
 /* Make footer pill links look like buttons */
 a.pill{
   text-decoration: none;
   color: #ffffff !important;
   display: inline-block;
 }
-
 a.pill:focus{ outline: 2px solid rgba(255,255,255,.65); outline-offset: 3px; }
-
 
 /* Scroll reveal directions */
 .reveal-up{transform:translateY(22px);}
@@ -471,4 +462,3 @@ img.contain{object-fit:contain;padding:0;background:#fff;}
 
 /* Utility: show full image without cropping */
 .imgContain{object-fit:contain !important; background:#fff;}
-
