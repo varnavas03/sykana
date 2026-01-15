@@ -85,3 +85,48 @@
   });
 })();
 
+// ===== Mobile Drawer Menu =====
+(function () {
+  const burger = document.querySelector('.burger');
+  const drawer = document.getElementById('mobileDrawer');
+  const overlay = document.querySelector('.drawerOverlay');
+  const closeBtn = drawer ? drawer.querySelector('.drawerClose') : null;
+
+  if (!burger || !drawer || !overlay || !closeBtn) return;
+
+  function openDrawer(){
+    overlay.hidden = false;
+    drawer.hidden = false;
+    requestAnimationFrame(() => drawer.classList.add('open'));
+    burger.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeDrawer(){
+    drawer.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    // wait for transition then hide
+    setTimeout(() => {
+      drawer.hidden = true;
+      overlay.hidden = true;
+    }, 280);
+  }
+
+  burger.addEventListener('click', () => {
+    if (drawer.hidden) openDrawer();
+    else closeDrawer();
+  });
+
+  closeBtn.addEventListener('click', closeDrawer);
+  overlay.addEventListener('click', closeDrawer);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !drawer.hidden) closeDrawer();
+  });
+
+  drawer.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => closeDrawer());
+  });
+})();
+
