@@ -466,3 +466,8 @@ img.contain{object-fit:contain;padding:0;background:#fff;}
 
 /* Utility: show full image without cropping */
 .imgContain{object-fit:contain !important; background:#fff;}
+
+.footerCards .footerCard:last-child{
+  grid-column: 2 / span 2;
+  justify-self: center;
+}
