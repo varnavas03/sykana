@@ -87,11 +87,21 @@
 
 const menuBtn = document.querySelector(".menuToggle");
 const nav = document.querySelector(".nav");
+const overlay = document.querySelector(".menuOverlay");
 
 menuBtn.addEventListener("click", () => {
 
   nav.classList.toggle("open");
   menuBtn.classList.toggle("open");
+  overlay.classList.toggle("open");
+
+});
+
+overlay.addEventListener("click", () => {
+
+  nav.classList.remove("open");
+  menuBtn.classList.remove("open");
+  overlay.classList.remove("open");
 
 });
 
