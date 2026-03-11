@@ -467,17 +467,18 @@ img.contain{object-fit:contain;padding:0;background:#fff;}
 /* Utility: show full image without cropping */
 .imgContain{object-fit:contain !important; background:#fff;}
 
-/* burger button */
+/* burger */
 .menuToggle{
   display:none;
   background:none;
   border:none;
   color:white;
-  font-size:26px;
+  font-size:28px;
   cursor:pointer;
+  z-index:10001;
 }
 
-/* mobile navigation */
+/* mobile nav */
 @media (max-width: 900px){
 
 .nav{
@@ -489,22 +490,26 @@ img.contain{object-fit:contain;padding:0;background:#fff;}
   background:var(--primary);
   flex-direction:column;
   align-items:flex-start;
-  padding:80px 25px;
+  padding:90px 30px;
   gap:20px;
   transition:right .35s ease;
 }
 
-.nav a{
-  font-size:18px;
-}
-
+/* when open */
 .nav.open{
   right:0;
 }
 
+/* burger visible */
 .menuToggle{
   display:block;
 }
 
+/* burger moves with menu */
+.menuToggle.open{
+  position:fixed;
+  right:220px;
+  top:14px;
 }
 
+}
