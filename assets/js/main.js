@@ -85,5 +85,10 @@
   });
 })();
 
+const menuBtn = document.querySelector(".menuToggle");
+const nav = document.querySelector(".nav");
 
+menuBtn.addEventListener("click", () => {
+  nav.classList.toggle("open");
+});
 
