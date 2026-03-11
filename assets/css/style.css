@@ -487,7 +487,10 @@ img.contain{object-fit:contain;padding:0;background:#fff;}
   right:-260px;
   width:260px;
   height:100vh;
-  background:var(--primary);
+
+  background: rgba(31,63,134,0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   flex-direction:column;
   align-items:flex-start;
   padding:90px 30px;
