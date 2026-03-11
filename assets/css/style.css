@@ -516,3 +516,17 @@ img.contain{object-fit:contain;padding:0;background:#fff;}
 }
 
 }
+.menuOverlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.35);
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .3s ease;
+  z-index:9000;
+}
+
+.menuOverlay.open{
+  opacity:1;
+  pointer-events:auto;
+}
